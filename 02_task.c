@@ -23,7 +23,7 @@ void printNode(node *l){
 void print_invers(node *a){ 
 
     while (a->next){ 
-        //printf("%d ", a->value); 
+        
         a = a->next; 
     }  
   
@@ -42,7 +42,7 @@ void clear(node * a){
         b = b->next;
 
         *a = *b;
-        //printNode(a); 
+         
     }     
     free(a);
 } 
@@ -112,8 +112,7 @@ int insertAfter (node * n, int value){
     b->prev = n;
 
     n->next = b;
-    //next = b;
-
+    
     if (next != NULL){
       b->next = next;
       next->prev = b;
@@ -121,13 +120,7 @@ int insertAfter (node * n, int value){
       b->next = NULL;
     }
 
-    /*
-    b->next = next;
-    n->next = b;
-    if (next != NULL){
-      next->prev = b;
-    }
-    */
+    
 
     return 0;
 }
@@ -141,7 +134,7 @@ int insertBefore (node * n, int value){
     node * b = (node *) malloc(sizeof(node)); 
     b->value = value;
     b->next = c;
-    //b->prev = prev;
+    
 
     (n)->prev = b;
 
@@ -150,7 +143,7 @@ int insertBefore (node * n, int value){
       b->prev = prev;
     } else {
       b->prev = NULL;
-      //*n = *b;
+   
     }
 
     return 0;
@@ -164,7 +157,7 @@ int removeFirst (node * a, int value){
     while (b){ 
       if (b->value == value){ 
           node * next = b->next;  
-          //node * prev = b->prev;         
+              
           
           free(b);
           
