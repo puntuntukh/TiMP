@@ -36,7 +36,7 @@ void print_invers(node *a){
 
 void clear(node * a){ 
     node * b = a; 
-    node * next = b->next;
+    node * next = b->next; 
     while (b->next != NULL){
         free(b); 
         b = b->next;
