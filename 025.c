@@ -3,7 +3,7 @@
 
 typedef struct node_tree {
 	struct node_tree *left;
-	struct node_tree *right;
+	struct node_tree *right; 
 	struct node_tree *parent;
 	int value;
 }node;
