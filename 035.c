@@ -140,5 +140,5 @@ int main(void) {
 		insert(&tree , num);
 	}
 print(tree.root);
-return 0;
+return 0; 
 }
