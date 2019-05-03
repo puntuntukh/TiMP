@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Просеивание элементов
 void siftDown(int *arr, int root, int bottom)
 {
- 	int max;
-	
+ 	int max;	
  	while (root * 2 <= bottom)
 	{
 		if ((root * 2 == bottom) || (arr[root * 2] > arr[root * 2 + 1]))
@@ -27,7 +25,6 @@ void siftDown(int *arr, int root, int bottom)
 	}
 }
 
-//Пиромидальная сортировка
 void sorting_function(int *arr, int arr_len)
 {
 	for (int i = (arr_len / 2) - 1; i >= 0; i--)
@@ -50,9 +47,7 @@ int main()
 	{
 		scanf("%d", &arr[i]);
 	}
-
 	sorting_function(arr, n);
-
 	for (int i = 0; i < n; i++)
 	{
 		printf("%d ", arr[i]);
