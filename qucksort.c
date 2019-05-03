@@ -17,12 +17,10 @@ void sorting_function (int *arr, int first, int last)
 			arr[r] = t;
 			l++;
 			r--;}
-	}
-	/*if (r < first)*/
+		}
 		sorting_function (arr, first, r+1);
-	/*if (l > last)*/
 		sorting_function (arr, l, last);
-}
+	}
 }    
 
 int main()
@@ -34,9 +32,7 @@ int main()
 	{
 		scanf("%d", &arr[i]);
 	}
-
 	sorting_function(arr, 0, n);
-
 	for (int i = 0; i < n; i++)
 	{
 		printf("%d ", (arr[i]));
