@@ -1,5 +1,5 @@
 #include <stdio.h> 
-#include <stdlib.h> 
+#include <stdlib.h>  
 
 void graph(int **Linkage, int n)
 {
@@ -182,7 +182,7 @@ for (int i = 0; i < n; i++)
 {
 mv[i] = 0;
 }
-
+ 
 int m[2], s = 0; 
 printf("\nКонтур минимальной длины:\n");
 circuit(Linkage, sum, s, n, mv, m);
