@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> 
+#include <stdlib.h> 
 
 void graph(int **Linkage, int n)
 {
@@ -63,8 +63,8 @@ int *s = malloc(n * sizeof(int));
 int *d = malloc(n * sizeof(int));
 for (int i = 0; i < n; i++)
 {
-s[i] = 0;
-d[i] = 1000; //типа бесконечность
+s[i] = 0; 
+d[i] = 1000; //типа бесконечность 
 }
 d[node - 1] = Linkage[node - 1][node - 1];
 int min, nodeIndex;
@@ -114,8 +114,8 @@ min = Linkage[s][i];
 }
 }
 m[0] = node;
-m[1] = m[1] + sum + min; // возвращает массив из 2 переемен 1 - индекс вершины 2 - кратчайший суммированный путь до этой вершины
-			 // вернет массив (индекс; длина)
+m[1] = m[1] + sum + min; // возвращает массив из 2 переемен 1 - индекс вершины 2 - кратчайший суммированный путь до этой вершины 
+// вернет массив (индекс; длина)
 return m;
 }
 
@@ -127,7 +127,7 @@ for (int i = 0; i < n; i++)
 {
 if (Linkage[i][s] != 0)
 {
-t++; 			//обход самого первого ненулевого элемента
+t++; //обход самого первого ненулевого элемента
 break;
 }
 }
@@ -143,7 +143,7 @@ circuit(Linkage, sum, node, n, mv, m);
 else
 {
 m[1] = m[1] + sum + Linkage[s][0];
-printf("%d\nДлина пути: %d", 1, summa+2);
+printf("%d\nДлина пути: %d", 1, summa);
 return;
 }
 }
@@ -167,7 +167,7 @@ for (int j = 0; j < n; j++)
 {
 printf("%d ", Linkage[i][j]);
 }
-}
+} 
 
 printf("\nНачальная вершина:\n");
 scanf("%d", &node);
@@ -183,7 +183,7 @@ for (int i = 0; i < n; i++)
 mv[i] = 0;
 }
 
-int m[2], s = 0;
+int m[2], s = 0; 
 printf("\nКонтур минимальной длины:\n");
 circuit(Linkage, sum, s, n, mv, m);
 printf("\n");
